@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(230, 173, 173);
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+.container {
+    background-color: rgb(162, 214, 249);
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: blue;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.toggle-row {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-text {
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 20px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: #a3a3a3;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-label::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #d1d1d1;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.toggle-checkbox:checked+.toggle-label::after {
+    transform: translate(40px);
+}
+
+#good:checked+.toggle-label {
+    background-color: #8ab67c;
+}
+
+#good:checked+.toggle-label::after {
+    background-color: #6bb955;
+}
+
+#cheap:checked+.toggle-label {
+    background-color: #7c8ab6;
+}
+
+#cheap:checked+.toggle-label::after {
+    background-color: #5855b9;
+}
+
+#fast:checked+.toggle-label {
+    background-color: #b67c7c;
+}
+
+#fast:checked+.toggle-label::after {
+    background-color: #b95555;
+}
