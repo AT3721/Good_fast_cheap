@@ -1,23 +1,17 @@
-let toggles = document.querySelectorAll(".toggle-checkbox");
-let good = document.querySelector("#good");
-let cheap = document.querySelector("#cheap");
-let fast = document.querySelector("#fast");
+let good = document.getElementById("good");
+let cheap = document.getElementById("cheap");
+let fast = document.getElementById("fast");
 
-toggles.forEach(toggles => {
-    toggles.addEventListener("change", (event) => {
-        checkToggles(event.target);
-    });
-});
-
-function checkToggles(theClickedOne) {
+function checkToggles(tenNutVuaBam) {
     if (good.checked && cheap.checked && fast.checked) {
-        if (good === theClickedOne) {
+
+        if (tenNutVuaBam === 'good') {
             fast.checked = false;
         }
-        if (cheap === theClickedOne) {
+        else if (tenNutVuaBam === 'cheap') {
             good.checked = false;
         }
-        if (fast === theClickedOne) {
+        else if (tenNutVuaBam === 'fast') {
             cheap.checked = false;
         }
     }
